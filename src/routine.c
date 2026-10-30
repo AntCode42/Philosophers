@@ -6,7 +6,7 @@
 /*   By: agard <agard@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 11:21:59 by agard             #+#    #+#             */
-/*   Updated: 2026/03/10 11:04:40 by agard            ###   ########.fr       */
+/*   Updated: 2026/03/10 17:05:25 by agard            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	*routine(void *arg)
 
 int	get_status(t_data *data)
 {
-	int status;
+	int	status;
 
 	pthread_mutex_lock(&data->mutex_death);
 	status = data->status;

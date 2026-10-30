@@ -6,7 +6,7 @@
 /*   By: agard <agard@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:24:11 by agard             #+#    #+#             */
-/*   Updated: 2026/03/10 10:44:24 by agard            ###   ########.fr       */
+/*   Updated: 2026/03/10 17:04:40 by agard            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 		while (argv[i][j] != '\0')
 		{
 			if (ft_isalnum(argv[i][j]) != 0)
-				return (2); // error : no numerique inpute
+				return (2);
 			j++;
 		}
 		i++;

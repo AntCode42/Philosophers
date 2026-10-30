@@ -6,7 +6,7 @@
 /*   By: agard <agard@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 11:57:59 by agard             #+#    #+#             */
-/*   Updated: 2026/03/10 10:54:46 by agard            ###   ########.fr       */
+/*   Updated: 2026/03/10 17:05:46 by agard            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ long	now_ms(void)
 
 void	precise_sleep(long time)
 {
-	long start;
+	long	start;
 
 	start = now_ms();
 	while (now_ms() - start < time)

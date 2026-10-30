@@ -6,7 +6,7 @@
 /*   By: agard <agard@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 10:53:20 by agard             #+#    #+#             */
-/*   Updated: 2026/03/10 11:09:42 by agard            ###   ########.fr       */
+/*   Updated: 2026/03/10 17:04:22 by agard            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int		end_program(t_philo **philo, t_data *data);
 void	fill_list(t_philo **philo, t_data *data, int nbr);
 t_philo	*new_node(int count);
 void	first_node(t_philo **philo, t_philo **first,
-			t_philo *node,t_philo **tmp);
+			t_philo *node, t_philo **tmp);
 void	add_back(t_philo **philo, t_philo **tmp, t_philo **node);
 
 // monitor.c

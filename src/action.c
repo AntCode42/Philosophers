@@ -6,7 +6,7 @@
 /*   By: agard <agard@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 18:54:34 by agard             #+#    #+#             */
-/*   Updated: 2026/03/10 10:46:59 by agard            ###   ########.fr       */
+/*   Updated: 2026/03/10 17:05:09 by agard            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	to_eat(t_philo *philo, t_philo *runner)
 
 void	to_sleep(t_philo *philo)
 {
-	struct timeval current_time;
+	struct timeval	current_time;
 
 	gettimeofday(&current_time, NULL);
 	pthread_mutex_lock(&philo->data->mutex);
@@ -63,7 +63,7 @@ void	to_think(t_philo *philo)
 	pthread_mutex_unlock(&philo->data->mutex);
 }
 
-int print_action(t_philo *philo, int msg)
+int	print_action(t_philo *philo, int msg)
 {
 	if (philo->data->status == 1)
 		return (1);
