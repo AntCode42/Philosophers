@@ -63,6 +63,5 @@ valgrind --tool=helgrind ./philo 5 800 200 200
 
 Claude (Anthropic) was used during this project for the following tasks:
 - Reviewing mutex usage and identifying potential data races.
-- Generating the README file.
 
 All AI-generated content was reviewed, understood, and validated before integration.
