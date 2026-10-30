@@ -1,0 +1,68 @@
+*This project has been created as part of the 42 curriculum by agard.*
+
+# Philosophers — *I never thought philosophy would be so deadly*
+
+## Description
+
+This project is an introduction to concurrent programming using threads and mutexes in C.
+
+The simulation places N philosophers around a round table. Each philosopher alternates between three states: **eating**, **sleeping**, and **thinking**. Between each pair of philosophers lies a single fork. To eat, a philosopher must hold both the fork to their left and the fork to their right. If a philosopher goes too long without eating, they die — and the simulation stops.
+
+The challenge is to manage concurrent access to shared resources (the forks) without deadlocks, data races, or starvation.
+
+## Instructions
+
+### Compilation
+
+```bash
+make
+```
+
+### Execution
+
+```bash
+./philo <number_of_philosophers> <time_to_die> <time_to_eat> <time_to_sleep> [number_of_times_each_philosopher_must_eat]
+```
+
+| Argument | Description |
+|---|---|
+| `number_of_philosophers` | Number of philosophers (and forks) at the table |
+| `time_to_die` (ms) | Time before a philosopher dies if they haven't started eating |
+| `time_to_eat` (ms) | Time it takes to eat (requires two forks) |
+| `time_to_sleep` (ms) | Time spent sleeping |
+| `number_of_times_each_philosopher_must_eat` | *(optional)* Simulation stops when all philosophers have eaten this many times |
+
+### Examples
+
+```bash
+# 5 philosophers, should not die
+./philo 5 800 200 200
+
+# 5 philosophers, each must eat 7 times
+./philo 5 800 200 200 7
+
+# 1 philosopher, must die
+./philo 1 800 200 200
+```
+
+### Test with valgrind / helgrind
+
+```bash
+valgrind --tool=helgrind ./philo 5 800 200 200
+```
+
+## Resources
+
+- **42 Gitbook** — Project documentation and conceptual overview provided by 42.
+- **CodeVault** — YouTube channel and blog covering threads, mutexes, and the dining philosophers problem in C.
+  - YouTube: [https://www.youtube.com/@CodeVault](https://www.youtube.com/@CodeVault)
+  - Website: [https://code-vault.net](https://code-vault.net)
+- **Peers at 42 Lausanne** — Peer discussions and code reviews were essential for catching edge cases, validating the mutex strategy, and improving overall understanding.
+
+### AI Usage
+
+Claude (Anthropic) was used during this project for the following tasks:
+- Reviewing mutex usage and identifying potential data races.
+- Generating the README file.
+
+All AI-generated content was reviewed, understood, and validated before integration.
